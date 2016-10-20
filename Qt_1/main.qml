@@ -30,23 +30,16 @@ ApplicationWindow {
         anchors.topMargin: 10
         anchors.bottomMargin: 10
         id: col1
-        spacing: 10
+        spacing: 20
         anchors.left: parent.left
         anchors.top: parent.top
 
-        /*Grid {
-            columns: 1
-            rows: 1
-            TextField {
-                //validator: DoubleValidator{}
-                id: field
-                focus: true
-            }
-        }
-*/
+
         TextField {
             id: field
             focus: true
+            width: window.minimumWidth
+            height: window.minimumHeight
         }
 
         Grid {
@@ -58,14 +51,13 @@ ApplicationWindow {
 
             Text {
                 Layout.alignment: Qt.AlignRight
-                text: "Fahrenheit" + " " + field.text
+                text: field.text + " F"//"Fahrenheit" + " " + field.text
             }
 
             Text { //1
                 Layout.alignment: Qt.AlignRight
                 text: try {
-                          //(((Number.fromLocaleString(l, field.text)) - 32) * 5/9).toLocaleString(l)
-                          "Celsius" + " " + (((Number.fromLocaleString(l, field.text)) - 32) * 5/9).toLocaleString(l)
+                          (((Number.fromLocaleString(l, field.text)) - 32) * 5/9).toLocaleString(l) + "C"
                       } catch (l) {
                         "ERROR";
                       }
@@ -73,14 +65,14 @@ ApplicationWindow {
 
             Text {
                 Layout.alignment: Qt.AlignRight
-                text: "Fahrenheit" + " " + field.text
+                text: field.text + " F"//"Fahrenheit" + " " + field.text
             }
 
             Text { //2
                 Layout.alignment: Qt.AlignRight
                 text: try {
-                          (((Number.fromLocaleString(l, field.text)) - 32) * 5/9 + 273.15).toLocaleString(l)
-                          "Kelvin" + " " + (((Number.fromLocaleString(l, field.text)) - 32) * 5/9 + 273.15).toLocaleString(l)
+                          //(((Number.fromLocaleString(l, field.text)) - 32) * 5/9 + 273.15).toLocaleString(l)
+                          (((Number.fromLocaleString(l, field.text)) - 32) * 5/9 + 273.15).toLocaleString(l) + "K"
                       } catch (l) {
                         "ERROR";
                       }
@@ -88,14 +80,14 @@ ApplicationWindow {
 
             Text {
                 Layout.alignment: Qt.AlignLeft
-                text: "Celsius" + " " + field.text
+                text: field.text + " C"//"Celsius" + " " + field.text
             }
 
             Text { //3
                 Layout.alignment: Qt.AlignRight
                 text: try {
-                          ((Number.fromLocaleString(l, field.text)) * 9/5 + 32).toLocaleString(l)
-                          "Fahrenheit" + " " + ((Number.fromLocaleString(l, field.text)) * 9/5 + 32).toLocaleString(l)
+                          //((Number.fromLocaleString(l, field.text)) * 9/5 + 32).toLocaleString(l)
+                          ((Number.fromLocaleString(l, field.text)) * 9/5 + 32).toLocaleString(l) + "F"
                       } catch (l) {
                         "ERROR";
                       }
@@ -103,13 +95,13 @@ ApplicationWindow {
 
             Text {
                 Layout.alignment: Qt.AlignRight
-                text: "Celsius" + " " + field.text
+                text: field.text + "C"//"Celsius" + " " + field.text
             }
 
             Text { //4
                 Layout.alignment: Qt.AlignRight
                 text: try {
-                          "Kelvin" + " " + ((Number.fromLocaleString(l, field.text)) + 273.15).toLocaleString(l)
+                          ((Number.fromLocaleString(l, field.text)) + 273.15).toLocaleString(l) + "K"
                       } catch (l) {
                         "ERROR";
                       }
@@ -117,13 +109,13 @@ ApplicationWindow {
 
             Text {
                 Layout.alignment: Qt.AlignRight
-                text: "Kelvin" + " " + field.text
+                text: field.text + "K"//"Kelvin" + " " + field.text
             }
 
             Text { //5
                 Layout.alignment: Qt.AlignRight
                 text: try {
-                          "Fahrenheit" + " " + (((Number.fromLocaleString(l, field.text)) - 273.15) * 9/5 + 32).toLocaleString(l)
+                          (((Number.fromLocaleString(l, field.text)) - 273.15) * 9/5 + 32).toLocaleString(l) + "F"
                       } catch (l) {
                         "ERROR"
                       }
@@ -131,13 +123,13 @@ ApplicationWindow {
 
             Text {
                 Layout.alignment: Qt.AlignRight
-                text: "Kelvin" + " " + field.text
+                text: field.text + "K"//"Kelvin" + " " + field.text
             }
 
             Text { //6
                 Layout.alignment: Qt.AlignRight
                 text: try {
-                          "Celsius" + " " + ((Number.fromLocaleString(l, field.text)) - 273.15).toLocaleString(l)
+                          ((Number.fromLocaleString(l, field.text)) - 273.15).toLocaleString(l) + "C"
                       } catch (l) {
                         "ERROR";
                       }
@@ -145,41 +137,4 @@ ApplicationWindow {
         }
     }
 
-   /* GridLayout {
-        id: grid
-        columns: 3
-
-        Text { text: "Three"; font.bold: true; }
-        Text { text: "words"; color: "red" }
-        Text { text: "in"; font.underline: true }
-        Text { text: "a"; font.pixelSize: 20 }
-        Text { text: "row"; font.strikeout: true }
-    } */
 }
-
-//property int switcher: 1
-//property real exp: 0
-//property int ind: 50
-
-/*property real t1: 0
-property real t2: 0
-property real t3: 0
-property real t4: 0
-property real t5: 0
-property real t6: 0
-*/
-
-/*function transform()
-{
-    x = field.text*1;
-
-    t3 = (x * 9/5 + 32).toFixed(2)
-    t5 = ((x - 273.15) * 9/5 + 32).toFixed(2)
-    t1 = ((x - 32) * 5/9).toFixed(2)
-    t6 = (x - 273.15).toFixed(2)
-    t2 = ((x - 32) * 5/9 + 273.15).toFixed(2)
-    t4 = (x + 273.15).toFixed(2)
-
-    //xy = Number.fromLocaleString(german, "123,456")
-}
-*/

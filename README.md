@@ -1,2 +1,2 @@
 # Projects
-Projects on Qt
+Different projects

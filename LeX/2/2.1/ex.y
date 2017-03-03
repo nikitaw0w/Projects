@@ -1,5 +1,5 @@
-/**
- * Программа транспонирования календаря 2.y
+п»ї/**
+ * РџСЂРѕРіСЂР°РјРјР° С‚СЂР°РЅСЃРїРѕРЅРёСЂРѕРІР°РЅРёСЏ РєР°Р»РµРЅРґР°СЂСЏ 2.y
  *
  * Copyright (c) 2017, Bazhenov Nikita <bazhenov@cs.karelia.ru>
  *
@@ -20,7 +20,7 @@ int tr = 0;
 int c = 0;
 int j,k = 0;
 int isdate = 0;
-const char *A[7][7] = {"Пн ", "Вт ", "Ср ", "Чт ", "Пт ", "Сб ", "Вс "};
+const char *A[7][7] = {"РџРЅ ", "Р’С‚ ", "РЎСЂ ", "Р§С‚ ", "РџС‚ ", "РЎР± ", "Р’СЃ "};
 int D[6][7];
 
 void yyerror(const char *str)
@@ -47,15 +47,15 @@ main()
         char *string;
 }
 
-%token <number> NUMB /* Список токенов. */
+%token <number> NUMB /* РЎРїРёСЃРѕРє С‚РѕРєРµРЅРѕРІ. */
 %token <string> CHAR
 %token <string> ENOL
 %token <string> STAB
 %token <string> OTHR
 
 %%
-commands: /* Список команд может быть пустым... */
-| commands command    //| commands command /* ...или состоять из множества комманд */
+commands: /* РЎРїРёСЃРѕРє РєРѕРјР°РЅРґ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј... */
+| commands command    //| commands command /* ...РёР»Рё СЃРѕСЃС‚РѕСЏС‚СЊ РёР· РјРЅРѕР¶РµСЃС‚РІР° РєРѕРјРјР°РЅРґ */
 ;
 
 command:

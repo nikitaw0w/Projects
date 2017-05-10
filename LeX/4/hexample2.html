@@ -1,0 +1,106 @@
+<style>
+#id1 {
+    background-color: #0000ff;
+    color: #ff0000;
+    height: 90px;
+}
+#id2 {
+    color: #ff0000;
+}
+.class1 {
+    background-color: #00ff00;
+    width: 140pt;
+}
+
+table#table1 {
+    color: #ff0000;
+}
+
+table tr td#id1 {
+    vertical-align: top;
+}
+
+td {
+    text-align: center;
+}
+</style>
+<table>
+	<tr>
+		<td id="id1">
+			Text1
+		</td>
+		<td class="class1">
+			Text2
+		</td>
+	</tr>
+	<tr>
+		<td class="class1">
+			Text3
+		</td>
+		<td id="id2">
+			Text4
+		</td>
+	</tr>
+</table>
+
+<table>
+	<tr><td>Text1</td><td>Text2</td></tr>
+	<tr><td>Text3</td><td style="color:#0000ff;">Text4</td></tr>
+</table>
+
+<table id="table1"><tr><td>Text1</td><td>Text2</td></tr><tr><td>Text3</td><td><span style="background-color:#00ff00;">Text4<span></td></tr></table>
+
+
+<table>
+	<tr>
+		<td colspan="2">
+			Text1
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Text3
+		</td>
+		<td>
+			Text4
+		</td>
+	</tr>
+</table>
+
+
+
+<table>
+	<tr>
+		<td rowspan="2">
+			Text1
+		</td>
+		<td>
+			Text2
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Text4
+		</td>
+	</tr>
+</table>
+
+
+<table>
+	<tr>
+		<th rowspan="2">
+			Text1
+		</th>
+		<th colspan="2">
+			Text2
+		</th>
+	</tr>
+	<tr>
+		<td>
+			Text4
+		</td>
+		<td>
+			Text5
+		</td>
+	</tr>
+</table>

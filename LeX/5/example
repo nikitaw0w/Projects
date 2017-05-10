@@ -1,0 +1,8 @@
+building
+building[name, description]
+building#(name='test')
+building#(name=('test'||'foo') && desc='test')
+building#(name='test' && description="test description")
+floor#(number(>2 && <5 || >10))
+building (room)
+building#(name='test') (room#(number=215))
